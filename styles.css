@@ -1,0 +1,870 @@
+/* Variables de Estilo y Paleta de Colores (Azul Marino, Plateado, Blanco) */
+:root {
+    --bg-color: #ffffff;
+    --primary-navy: #1b263b;
+    --accent-silver: #8d99ae;
+    --text-dark: #2b2d42;
+    --white: #ffffff;
+    --light-gray: #f4f6f8;
+    --sage-green: #8a9685;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-navy);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Contenedor tipo móvil / invitación web */
+.invitation-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Secciones Generales */
+.section {
+    padding: 45px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.section-alt {
+    background-color: var(--bg-color);
+}
+
+/* Animación de aparición al hacer scroll (Scroll Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Portada / Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(27, 38, 59, 0.4), rgba(27, 38, 59, 0.6)), url("assets/img/pexels-el-gringo-photo-116752370-34971630.jpg") no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h3 {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* Tipografía Cursiva Delgada y Elegante */
+.couple-names, .section-title {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 300;
+}
+
+.couple-names {
+    font-size: 4rem;
+    color: var(--white);
+    margin: 10px 0;
+    line-height: 1.1;
+}
+
+.date-badge {
+    margin-top: 25px;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+}
+
+/* Reproductor de Música & Líneas Divisorias */
+.music-section {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.music-instruction {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+/* Corazón intercalado en el texto con latido constante y permanente */
+.inline-heart-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.text-heart {
+    color: var(--sage-green);
+    font-size: 1.2rem;
+    vertical-align: middle;
+    display: inline-block;
+    animation: permanentPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes permanentPulse {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.25); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+/* Barras superior e inferior del reproductor */
+.audio-progress-bar {
+    width: 85%;
+    max-width: 300px;
+    height: 1.5px;
+    background-color: var(--sage-green);
+    margin: 0 auto;
+    position: relative;
+}
+
+.progress-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--sage-green);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -2.25px;
+}
+
+/* Controles del Reproductor */
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.control-btn {
+    color: var(--sage-green);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Botón Corazón Grande */
+.heart-player-btn {
+    width: 60px;
+    height: 55px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.heart-player-btn:hover {
+    transform: scale(1.08);
+}
+
+.heart-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.music-icon-inside {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-top: -6px;
+}
+
+/* Animación de Corazones Flotantes */
+.floating-hearts-container {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.floating-heart {
+    position: absolute;
+    color: var(--sage-green);
+    font-size: 0.85rem;
+    opacity: 0.8;
+    animation: floatUpAndFade 1.4s ease-out forwards;
+}
+
+@keyframes floatUpAndFade {
+    0% {
+        transform: translateY(0) scale(0.7);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-45px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Títulos Generales */
+.section-title {
+    font-size: 3.2rem;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+.title-small {
+    font-size: 2.3rem;
+}
+
+.title-light {
+    color: var(--white);
+}
+
+p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Frase Especial */
+.quote-icon {
+    color: var(--accent-silver);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.quote-text {
+    font-style: italic;
+    max-width: 360px;
+    margin: 0 auto;
+    color: #444;
+}
+
+/* Padres */
+.parents-section {
+    background-color: var(--light-gray);
+}
+
+.parents-group {
+    margin-top: 20px;
+}
+
+.parents-label {
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 4px;
+}
+
+.parents-names {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Iconos de Detalles */
+.icon-detail {
+    color: var(--accent-silver);
+    margin-right: 5px;
+}
+
+/* Cuenta Regresiva con Corazón */
+.countdown-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.countdown-box {
+    background: var(--white);
+    padding: 12px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-width: 65px;
+    border: 1px solid #e0e0e0;
+}
+
+.countdown-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+    display: block;
+}
+
+.countdown-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--accent-silver);
+    margin-top: 4px;
+    display: block;
+}
+
+.heart-countdown {
+    background-color: var(--sage-green);
+    color: var(--white);
+    border: none;
+}
+
+.heart-countdown .countdown-number,
+.heart-countdown .countdown-label {
+    color: var(--white);
+}
+
+/* Calendario Diciembre 2026 */
+.calendar-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--accent-silver);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.calendar-month-title {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
+    font-size: 0.85rem;
+}
+
+.cal-header {
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.cal-day {
+    padding: 6px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+}
+
+/* Día marcado con la imagen del corazón de fondo */
+.special-heart-day {
+    position: relative;
+    color: var(--white); 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.special-heart-day::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/img/Atelier_CORAZON.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: 30% center;
+    z-index: -1;
+    animation: heartPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.18); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.12); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.calendar-bell {
+    font-size: 1.4rem;
+    color: var(--sage-green);
+    margin: 15px 0;
+}
+
+.btn-calendar {
+    background-color: var(--sage-green);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Itinerario */
+.timeline-container {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    position: relative;
+    padding-left: 35px;
+    border-left: 2px solid var(--accent-silver);
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -10px;
+    top: 0;
+    background: var(--light-gray);
+    color: var(--primary-navy);
+    font-size: 1rem;
+    padding: 0 2px;
+}
+
+.timeline-time {
+    font-weight: 600;
+    color: var(--primary-navy);
+    font-size: 1rem;
+}
+
+.timeline-desc {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.timeline-last {
+    border-left: none;
+}
+
+.timeline-last .timeline-icon {
+    left: -8px;
+}
+
+/* Tarjetas Informativas */
+.info-card {
+    margin-bottom: 30px;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--primary-navy);
+    margin-bottom: 5px;
+}
+
+.card-text {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Confirmación (RSVP) */
+.rsvp-box {
+    background-color: var(--primary-navy);
+    color: var(--white);
+}
+
+.rsvp-text {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Botones Generales */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(27, 38, 59, 0.2);
+}
+
+.btn:hover {
+    background-color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background-color: var(--white);
+    color: var(--primary-navy);
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================================
+   Sección de arte: imagen y marco superpuesto
+   ========================================== */
+.full-width-art-section {
+    width: 100%;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.art-photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.center-photo {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 115px);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 1;
+}
+
+.frame-top {
+    position: absolute;
+    top: 0 !important;
+    left: 0;
+    width: 130%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/img/Atelier_EFECTO_FOTO_copia.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.frame-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/img/Atelier_EFECTO_FOTO.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ==========================================
+   Separador de Icono (Anillos)
+   ========================================== */
+.divider-section {
+    padding: 10px 25px;
+}
+
+.divider-icon-container {
+    width: 65px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Contenedor para los iconos de vestimenta */
+.dress-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.card-svg-icon {
+    width: 24px;
+    height: 24px;
+    fill: #1a2530;
+}
+
+.dress-icons-container .card-icon {
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.dress-svg {
+    width: 28px;
+    height: 28px;
+    fill: #1a2530;
+}
+
+/* ==========================================
+   Contenedor y Posicionamiento del Marco Floral
+   ========================================== */
+.couple-floral-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.floral-frame-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 35px 50px 35px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estructura de arco para la foto */
+.arch-frame {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    border-radius: 180px 180px 20px 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.arch-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flower-item {
+    position: absolute;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+/* Ramo central corregido: horizontal, en la base y con escala correcta */
+.flower-bottom-main {
+    bottom: -110px; 
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg) scale(0.85); 
+    width: 210px; 
+    z-index: 10;
+}
+
+.flower-bottom-bg {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    z-index: 4;
+    opacity: 0.8;
+}
+
+/* Lado Izquierdo (Mitad inferior) */
+.flower-left-side {
+    bottom: 25px;
+    left: -12px;
+    width: 130px;
+    z-index: 8;
+    transform: rotate(-15deg);
+}
+
+.flower-left-top {
+    bottom: 90px;
+    left: -18px;
+    width: 110px;
+    z-index: 3;
+    transform: rotate(-40deg) scale(0.85);
+}
+
+/* Lado Derecho (Mitad inferior) */
+.flower-right-side {
+    bottom: 25px;
+    right: -12px;
+    width: 130px;
+    z-index: 8;
+    transform: scaleX(-1) rotate(-15deg);
+}
+
+.flower-right-top {
+    bottom: 90px;
+    right: -18px;
+    width: 110px;
+    z-index: 3;
+    transform: scaleX(-1) rotate(-40deg) scale(0.85);
+}
+
+/* ==========================================
+   Sección Separador de Nombres (Francisco & Fatima)
+   ========================================== */
+.names-divider-section {
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.names-divider-container {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.names-divider-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Efecto Typewriter para la portada */
+.couple-names span {
+    display: inline-block;
+    min-height: 1em;
+}
+
+/* Cursor parpadeante sutil mientras se escribe */
+.typing-cursor::after {
+    content: '|';
+    animation: blinkCursor 0.7s infinite;
+    color: var(--white);
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ==========================================
+   Sección Final con Foto, Overlay y Texto
+   ========================================== */
+.final-photo-section {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-photo-container {
+    position: relative;
+    width: 100%;
+    height: 480px; /* Altura de la sección fotográfica */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.final-bg-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Capa oscura semitransparente para que el texto resalte */
+.final-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+/* Contenedor del texto sobre la foto */
+.final-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 30px;
+    text-align: center;
+    color: var(--white, #ffffff);
+    max-width: 420px;
+}
+
+.final-quote {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: var(--white, #ffffff);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.final-couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    color: var(--white, #ffffff);
+    line-height: 1.1;
+    margin-top: 10px;
+}

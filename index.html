@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Fátima & Francisco</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Hoja de Estilos Externa -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Etiquetas Open Graph para la vista previa en redes sociales (Instagram, WhatsApp, etc.) -->
+    <meta property="og:title" content="Nuestra Boda - Fátima & Francisco">
+    <meta property="og:description" content="28 · DICIEMBRE · 2026 - Acompaña a Fátima y Francisco en este día tan especial.">
+    <meta property="og:image" content="https://estudioatelierdigital.github.io/Boda-Fatima-Y-Francisco/assets/img/6d8e21b7-d65f-43c2-8bfc-1a4ac98b030e.jpeg">
+    <meta property="og:url" content="https://estudioatelierdigital.github.io/Boda-Fatima-Y-Francisco/">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <!-- Contenedor Principal / Invitación Web Móvil -->
+    <div class="invitation-container">
+
+        <!-- 1. Portada / Hero -->
+        <section class="hero reveal">
+            <h3>Nuestra Boda</h3>
+            <div class="couple-names">
+                <span id="typewriter-name1"></span><br>
+                <span id="typewriter-amp"></span><br>
+                <span id="typewriter-name2"></span>
+            </div>
+            <div class="date-badge">28 · DICIEMBRE · 2026</div>
+        </section>
+
+        <!-- 2. Reproductor de Música -->
+        <section class="section music-section reveal">
+            <!-- Línea superior -->
+            <div class="audio-progress-bar">
+                <div class="progress-line"></div>
+            </div>
+
+            <p class="music-instruction">
+                Presiona el 
+                <span class="inline-heart-wrapper" id="inlineHeart" title="Reproducir Música">
+                    <i class="fa-solid fa-heart text-heart"></i>
+                    <span class="floating-hearts-container" id="heartsContainer"></span>
+                </span> 
+                para escuchar nuestra canción
+            </p>
+
+            <!-- Botón Principal en Forma de Corazón -->
+            <div class="player-controls">
+                <i class="fa-solid fa-step-backward control-btn"></i>
+                
+                <div class="heart-player-btn" id="playMusicBtn" title="Reproducir Música">
+                    <svg viewBox="0 0 100 90" class="heart-svg">
+                        <path d="M50,88 C50,88 5,55 5,28 C5,12 18,2 32,2 C41,2 47,7 50,13 C53,7 59,2 68,2 C82,2 95,12 95,28 C95,55 50,88 50,88 Z" fill="var(--sage-green)"/>
+                    </svg>
+                    <i class="fa-solid fa-music music-icon-inside" id="musicIcon"></i>
+                </div>
+
+                <i class="fa-solid fa-step-forward control-btn"></i>
+            </div>
+
+            <!-- Línea inferior -->
+            <div class="audio-progress-bar bottom-bar">
+                <div class="progress-line"></div>
+            </div>
+
+            <audio id="bgAudio" loop>
+                <source src="assets/audio/music.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <!-- 3. Versículo / Frase Especial -->
+        <section class="section reveal" id="verse-section">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="quote-text" id="verse-quote-el"></p>
+            <p id="verse-ref-el"></p>
+        </section>
+
+        <!-- Sección de Imagen de la Pareja con Marco Floral -->
+        <section class="section couple-floral-section reveal">
+            <div class="floral-frame-wrapper">
+                <!-- Arreglos Florales Inferiores (Base) -->
+                <img src="assets/img/1_FLOR DECORATIVA 2.png" alt="Flores Centro" class="flower-item flower-bottom-main">
+                <img src="assets/img/Atelier_FLOR DECO 6.png" alt="Hojas Fondo" class="flower-item flower-bottom-bg">
+
+                <!-- Arreglos Lado Izquierdo (Mitad hacia abajo) -->
+                <img src="assets/img/Flores_Flores 2.png" alt="Flores Izquierda" class="flower-item flower-left-side">
+                <img src="assets/img/Atelier_FLOR DECO 1.png" alt="Ramas Izquierda" class="flower-item flower-left-top">
+
+                <!-- Arreglos Lado Derecho (Mitad hacia abajo) -->
+                <img src="assets/img/Flores_Flores 2.png" alt="Flores Derecha" class="flower-item flower-right-side">
+                <img src="assets/img/Atelier_FLOR DECO 1.png" alt="Ramas Derecha" class="flower-item flower-right-top">
+
+                <!-- Tu imagen actual de la pareja con el marco de arco -->
+                <div class="arch-frame">
+                    <img src="assets/img/6d8e21b7-d65f-43c2-8bfc-1a4ac98b030e.jpeg">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sección Padres -->
+        <section class="section parents-section reveal">
+            <h2 class="section-title title-small">Con la bendición de nuestros padres</h2>
+            
+            <div class="parents-group">
+                <p class="parents-label">Padres de la Novia:</p>
+                <p class="parents-names">Miguel Reyes, Melina Guzmán y Sor Alva Reyes</p>
+            </div>
+
+            <div class="parents-group">
+                <p class="parents-label">Padres del Novio:</p>
+                <p class="parents-names">José Tomás Soto y Julia Medrano</p>
+            </div>
+        </section>
+
+        <!-- Separador con Icono de Anillos -->
+        <section class="section divider-section reveal">
+            <div class="divider-icon-container">
+                <img src="assets/img/Atelier_ANILLOS 1.png" alt="Anillos de Boda" class="divider-icon">
+            </div>
+        </section>
+
+        <!-- 5. Ceremonia Religiosa -->
+        <section class="section reveal">
+            <h2 class="section-title">Ceremonia Religiosa</h2>
+            <p><i class="fa-regular fa-clock icon-detail"></i> <strong>4:00 pm</strong></p>
+            <p><i class="fa-solid fa-location-dot icon-detail"></i> <strong>Parroquia San Nicolás de Bari</strong><br>Nicolás Bravo, Canatlán, Dgo.</p>
+            <a href="https://www.google.com/maps/place/24%C2%B023%E2%80%B226.2%22N+104%C2%B044%2731.1%22W/@24.3906214,-104.741973" target="_blank" class="btn">Ver Ubicación Ceremonia</a>
+        </section>
+
+        <!-- 6. Recepción -->
+        <section class="section section-alt reveal">
+            <h2 class="section-title">Recepción</h2>
+            <p><i class="fa-regular fa-clock icon-detail"></i> <strong>5:00 pm</strong></p>
+            <p><i class="fa-solid fa-champagne-glasses icon-detail"></i> <strong>Casa de la novia</strong><br>Nicolás Bravo, Canatlán, Dgo.</p>
+            <a href="https://maps.app.goo.gl/quPkhS3fSgXVavAC8" target="_blank" class="btn">Ver Ubicación Recepción</a>
+        </section>
+
+        <!-- Sección de Arte con Marcos Fijos y Sin Saltos -->
+        <section class="section full-width-art-section reveal">
+            <div class="art-photo-wrapper">
+                <!-- Imagen Central de la Pareja -->
+                <img src="assets/img/8050098.jpg" class="center-photo" alt="Pareja">
+                
+                <!-- Marco Superior (Absolute) -->
+                <div class="frame-top"></div>
+                
+                <!-- Marco Inferior (Absolute) -->
+                <div class="frame-bottom"></div>
+            </div>
+        </section>
+
+        <!-- 7. Cuenta Regresiva -->
+        <section class="section reveal">
+            <h2 class="section-title title-small">Comenzó la Cuenta Regresiva</h2>
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hrs</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Min</span>
+                </div>
+                <div class="countdown-box heart-countdown">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador de Nombres: Francisco & Fatima -->
+        <section class="section names-divider-section reveal">
+            <div class="names-divider-container">
+                <img src="assets/img/Atelier_Francisco_y_Fatima_2.png" alt="Francisco y Fatima" class="names-divider-img">
+            </div>
+        </section>
+
+        <!-- 8. Calendario Diciembre 2026 Corregido -->
+        <section class="section calendar-section reveal">
+            <p class="calendar-subtitle">RESERVA ESTA FECHA EN TU CALENDARIO</p>
+            <h3 class="calendar-month-title">DICIEMBRE 2026</h3>
+            <div class="calendar-grid">
+                <span class="cal-header">Lun</span><span class="cal-header">Mar</span><span class="cal-header">Mié</span><span class="cal-header">Jue</span><span class="cal-header">Vie</span><span class="cal-header">Sáb</span><span class="cal-header">Dom</span>
+                
+                <!-- Semana 1 (Día 1 cae en Martes) -->
+                <span class="cal-day empty"></span>
+                <span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span>
+                
+                <!-- Semana 2 -->
+                <span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span>
+                
+                <!-- Semana 3 -->
+                <span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span>
+                
+                <!-- Semana 4 -->
+                <span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span>
+                
+                <!-- Semana 5 (Día 28 con el corazón en Lunes) -->
+                <span class="cal-day special-heart-day">28</span>
+                <span class="cal-day">29</span><span class="cal-day">30</span><span class="cal-day">31</span>
+                <span class="cal-day empty"></span><span class="cal-day empty"></span><span class="cal-day empty"></span>
+            </div>
+            <div class="calendar-bell">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <a href="https://calendar.google.com" target="_blank" class="btn btn-calendar">AGENDAR EN GOOGLE CALENDAR <i class="fa-solid fa-chevron-right"></i></a>
+        </section>
+
+        <!-- 9. Itinerario -->
+        <section class="section section-alt reveal" id="itinerary-section">
+            <h2 class="section-title">Itinerario</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" data-time="4:00 pm" data-desc="Ceremonia Religiosa">
+                    <i class="fa-solid fa-church timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+                <div class="timeline-item" data-time="5:00 pm" data-desc="Recepción">
+                    <i class="fa-solid fa-glass-cheers timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+                <div class="timeline-item" data-time="5:30 pm" data-desc="Comida">
+                    <i class="fa-solid fa-utensils timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+                <div class="timeline-item" data-time="9:00 pm" data-desc="Brindis">
+                    <i class="fa-solid fa-wine-glass timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+                <div class="timeline-item" data-time="10:00 pm" data-desc="Baile">
+                    <i class="fa-solid fa-music timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+                <div class="timeline-item timeline-last" data-time="2:00 am" data-desc="Fin del evento">
+                    <i class="fa-solid fa-moon timeline-icon"></i>
+                    <div class="timeline-time"></div>
+                    <div class="timeline-desc"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Dress Code & Mesa de Regalos -->
+        <section class="section reveal">
+            <div class="info-card">
+                <div class="dress-icons-container">
+                    <!-- Icono detallado de Vestido de Noche -->
+                    <svg class="card-svg-icon dress-svg" viewBox="0 0 24 24" fill="currentColor">
+                        <!-- Tirantes -->
+                        <path d="M8.5 2h1.5v3.5H8.5V2zm5.5 0h1.5v3.5H14V2z"/>
+                        <!-- Torso y Escote Corazón -->
+                        <path d="M7 5.5c0 0 1.2 2 5 2s5-2 5-2v4.5H7V5.5z"/>
+                        <!-- Franja del cinturón -->
+                        <path d="M6.5 11.5h11v1.5h-11z"/>
+                        <!-- Falda con vuelo -->
+                        <path d="M5.5 14h13l2.2 8H3.3l2.2-8z"/>
+                        <!-- Líneas/Pliegues inferiores de la falda -->
+                        <path d="M10 16v5m4-5v5" stroke="var(--white, #ffffff)" stroke-width="0.8" stroke-linecap="round"/>
+                    </svg>
+
+                    <!-- Icono de Traje -->
+                    <i class="fa-solid fa-user-tie card-icon"></i>
+                </div>
+                <h3 class="card-title">Código de Vestimenta</h3>
+                <p class="card-text">Casual - Formal</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fa-solid fa-gift card-icon"></i>
+                <h3 class="card-title">Mesa de Regalos</h3>
+                <p class="card-text">Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros para iniciar esta nueva etapa, lo que nazca de su corazón será bien recibido.</p>
+            </div>
+        </section>
+
+        <!-- 11. Confirmación de Asistencia (RSVP) -->
+        <section class="section rsvp-box reveal">
+            <h2 class="section-title title-light">Confirmación de Asistencia</h2>
+            <p class="rsvp-text">Por favor, confirma tu asistencia para acompañarnos en este día tan especial.</p>
+            <a href="https://wa.me/6778854442?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Fátima%20y%20Francisco." target="_blank" class="btn btn-light">Confirmar por WhatsApp</a>
+        </section>
+
+        <!-- 12. Sección Final con Foto y Dedicatoria -->
+        <section class="section final-photo-section reveal">
+            <div class="final-photo-container">
+                <img src="assets/img/865809378_2975455832803854_8185805395214041209_n.jpg" alt="Fátima y Francisco" class="final-bg-photo">
+                <div class="final-overlay"></div>
+                <div class="final-content">
+                    <p class="final-quote">
+                        Las mejores cosas de la vida son aún más fantásticas cuando se comparten con personas tan maravillosas como tú. ¡Te esperamos!
+                    </p>
+                    <div class="final-couple-names">Fátima & Francisco</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Archivo JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
